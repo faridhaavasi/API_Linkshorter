@@ -52,6 +52,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'apps.common.apps.CommonConfig',
+    'apps.users.apps.UsersConfig',  
+
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -190,7 +192,7 @@ else:
     }
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
-
+AUTH_USER_MODEL = "users.User"
 
 # DEBUG TOOLBAR
 # INTERNAL_IPS = [
